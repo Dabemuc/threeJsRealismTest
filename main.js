@@ -55,7 +55,7 @@ var walls = []
       texture.repeat.x = 10
       texture.repeat.y = 60
       
-      for(var i = 0; i < 500; i++){
+      for(var i = 0; i < 1000; i++){
         const ballMaterial = {
           clearcoat: 1.0,
           clearcoatRoughness: 0.1,
@@ -93,7 +93,7 @@ var walls = []
 
       });
 
-      const cubeGeometry = new THREE.BoxGeometry(1000, 30, 10)
+      const cubeGeometry = new THREE.BoxGeometry(1000, 50, 20)
       cubeMesh = new THREE.Mesh(cubeGeometry, new THREE.MeshBasicMaterial({color: 0xff0000}))
       cubeMesh.castShadow = true
       cubeMesh.position.y = 5
@@ -130,7 +130,7 @@ let x = 0,z = 0
 function animate() {
 
   //console.log(balls)
-  delta = Math.min(clock.getDelta(), 0.1)
+  delta = Math.min(clock.getDelta(), 0.05)
   world.step(delta)
 
   x = x + delta
